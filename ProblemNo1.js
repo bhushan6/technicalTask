@@ -10,8 +10,10 @@ const checkLoad = (load) => {
         server = 2*server + 1;
     }
     server = Math.floor(server)
+    // console.log(server)
 }
 
 loadPerMin.forEach((load) => {
-    setInterval(checkLoad(load), 60000)
+    setInterval(checkLoad(load), serverRunIntervalInM)
+    console.log(server)
 })
